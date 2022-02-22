@@ -1,0 +1,130 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #121214;
+    color:white;
+}
+
+.login-rigth img {
+   height: 30%;
+   width: 30%;
+   margin-bottom: 40px;
+}
+
+.login-rigth {
+    background-color: #29292E;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+}
+
+.login-rigth h4{
+    font-family: 'Roboto Slab';
+    font-weight: 500;
+    margin-top: 30px;
+    font-size: 15px;
+    color: #e1e1e6;
+}
+
+.LoginInputLogin {
+    display: flex;
+    align-items: center;
+    color:gray;
+    background-color: #1A1A1D;
+    border-radius: 5px;
+    padding: 3px;
+    width: 98%;
+    height: 50px;
+}
+
+.LoginInputLogin svg{
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.LoginInputLogin input {
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #E1E1E6;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.LoginInputPassword {
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: #1A1A1D;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 5px;
+    width: 98%;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.LoginInputPassword svg{
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.LoginInputPassword input {
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #E1E1E6;
+    border: none;
+    font-size: 17px;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+.login-rigth button {
+    width: 99%;
+    background-color: #202024;
+    color: #EFF2F5;
+    font-weight: 800;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 11px;
+    border:none;
+    outline-width: 0;
+}
+
+.login-rigth button:hover {
+    background-color: #121214;
+    color: #EFF2F5;
+    cursor: pointer;
+}
+
+.login-eye {
+    align-items: center;
+    justify-content: center;
+    font-size: 30;
+    cursor: pointer;
+    margin-right: 10px;
+    size: 20;
+}
+
+.link {
+    text-decoration: none;
+    color: #EFF2F5;
+}
+
+.checkbox{
+    margin-left: 360px;
+    color: #e1e1e6;
+  }
