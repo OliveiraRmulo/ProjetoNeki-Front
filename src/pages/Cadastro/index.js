@@ -3,11 +3,15 @@ import "./cadastro.css";
 import Logo from "../../assets/NEKILOGO.png";
 import { MdAccountCircle, MdLock } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
+import api from "../../service/api";
 
 
 function Cadastro() {
-    const [login, setLogin] = useState("")
-    const [password, setPassword] = useState("")
+    const [cadastro, setCadastro] = useState ({
+        login: "",
+        password: ""
+    });
+
     const [confPassword, setConfPassword] = useState("")
     const [show, setShow] = useState(false)
 
@@ -16,9 +20,15 @@ function Cadastro() {
         setShow(!show);
     }
 
-    function alerta() {
-        alert("Casdastrado com sucesso")
-    }
+    function Cadastrar() {
+            api.post("/neki/user" , cadastro).then((res) => {
+                alert("Usuario Cadastrado com Sucesso!");
+            }).catch((err) => {
+                    alert("Verifique se as senhas estão iguais e tente novamente")
+                })
+            }
+
+
     return (
         <div className="cadastro">
 
@@ -29,14 +39,14 @@ function Cadastro() {
 
                     <div className="CadastroInputLogin">
                         <MdAccountCircle />
-                        <input className={login !== "" ? "has-val input" : "input"} type="login" placeholder="Login" value={login}
-                            onChange={e => setLogin(e.target.value)} />
+                        <input className={cadastro.login !== "" ? "has-val input" : "input"} type="login" placeholder="Login" value={cadastro.login}
+                            onChange={e => setCadastro({ ...cadastro, login:e.target.value})} />
                     </div>
 
                     <div className="CadastroInputPassword">
                         <MdLock />
-                        <input className={password !== "" ? "has-val input" : "input"} type={show ? "text" : "password"}
-                         placeholder="Senha" value={password} onChange={e => setPassword(e.target.value)} />
+                        <input className={cadastro.password !== "" ? "has-val input" : "input"} type={show ? "text" : "password"}
+                         placeholder="Senha" value={cadastro.password} onChange={e => setCadastro({ ...cadastro, password:e.target.value})} />
 
                         <div className="cadastro-eye">
                             {show ? (<HiEye onClick={handleClick} />) : (<HiEyeOff onClick={handleClick} />)}
@@ -54,7 +64,7 @@ function Cadastro() {
 
                     </div>
                 
-                <button type="submit" onClick={alerta} >
+                <button type="submit" onClick={Cadastrar} >
                     Cadastrar
                 </button>
 

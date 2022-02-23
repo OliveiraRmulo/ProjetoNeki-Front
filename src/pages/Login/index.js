@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import api from "../../service/api";
 import "./login.css";
 import Logo from "../../assets/NEKILOGO.png";
 import { Link, useHistory } from "react-router-dom";
@@ -33,14 +34,12 @@ function Login() {
             localStorage.setItem("login", user.login)
         }
 
-        // api.post("/user/login", user).then((response) => {
-        //     console.log(response)
-        //     history.push("/home")
-        // }).catch((err) => {
-        //     console.log(err)
-        //     alert("Usuário não encontrado")
-        // })
-        // console.log("qualquer coisa")
+        api.post("/neki/user/login", user).then((response) => {
+            console.log(response)
+            history.push("/home")
+        }).catch((err) => {
+            console.log(err)
+        })
     }
 
     function Save() {
