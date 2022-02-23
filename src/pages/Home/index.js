@@ -25,7 +25,7 @@ function Home() {
 
                 <h1>Comunicação</h1>
                 <h2>10</h2>
-                <img src={Comunicacao} alt="pokemon" />
+                <img src={Comunicacao} alt="Comunição" />
 
                 <div className="homeCardsIconsPencil">
                     <BsPencil />
@@ -40,7 +40,7 @@ function Home() {
 
                 <h1>Criatividade</h1>
                 <h2>9</h2>
-                <img src={Criatividade} alt="pokemon" />
+                <img src={Criatividade} alt="Criatividade" />
 
                 <div className="homeCardsIconsPencil">
                     <BsPencil />
